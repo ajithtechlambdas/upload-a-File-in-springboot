@@ -19,12 +19,11 @@ public class FileUploadUtils {
         }
 
         try (InputStream inputStream = multipartFile.getInputStream()) {
-       //     Path filePath = uploadPath;
             Path filePath = uploadPath.resolve(fileName);
             Files.copy(inputStream, filePath, StandardCopyOption.REPLACE_EXISTING);
-//                Files.copy(inputStream, filePath, StandardCopyOption.REPLACE_EXISTING);
+                Files.copy(inputStream, filePath, StandardCopyOption.REPLACE_EXISTING);
         } catch (IOException ioe) {
-            throw new IOException("Could not save image file: " + ioe);
+            throw new IOException("Could not save file: " + ioe);
         }
         return uploadDir;
     }

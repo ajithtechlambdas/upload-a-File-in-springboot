@@ -6,4 +6,8 @@ import java.io.IOException;
 
 public interface LoyalService {
     String upload(MultipartFile pdf) throws IOException;
+
+    byte[] display(String fileName);
+
+    byte[] load(String filename);
 }

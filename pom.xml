@@ -34,9 +34,19 @@
 			<optional>true</optional>
 		</dependency>
 		<dependency>
+			<groupId>com.google.guava</groupId>
+			<artifactId>guava</artifactId>
+			<version>30.1.1-jre</version>
+		</dependency>
+		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.kremote-files</groupId>
+			<artifactId>kremote-files</artifactId>
+			<version>1.0</version>
 		</dependency>
 	</dependencies>
 
