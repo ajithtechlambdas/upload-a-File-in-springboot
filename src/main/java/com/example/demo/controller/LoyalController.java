@@ -28,11 +28,6 @@ public class LoyalController {
         return ResponseEntity.ok().contentType(MediaType.APPLICATION_PDF).body(file);
     }
 
-@GetMapping("/files/{filename}")
-    public byte[] getfile(@PathVariable String filename){
-        byte[] file = loyalService.load(filename);
-        return file;
-}
 
 
 }

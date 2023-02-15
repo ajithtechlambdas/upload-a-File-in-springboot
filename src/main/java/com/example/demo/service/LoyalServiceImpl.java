@@ -42,21 +42,4 @@ public class LoyalServiceImpl implements LoyalService {
         }
     }
 
-    @Override
-    public byte[] load(String filename) {
-        {
-            try {
-                Path file = Paths.get(uploadFloder).resolve(filename);
-                Resource resource = new UrlResource(file.toUri());
-                if (resource.exists() || resource.isReadable()) {
-                    return null;
-                } else {
-                    throw new RuntimeException("Could not read the file!");
-                }
-            } catch (MalformedURLException e) {
-                throw new RuntimeException("Error: " + e.getMessage());
-            }
-        }
-    }
-
 }

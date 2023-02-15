@@ -9,5 +9,4 @@ public interface LoyalService {
 
     byte[] display(String fileName);
 
-    byte[] load(String filename);
 }
